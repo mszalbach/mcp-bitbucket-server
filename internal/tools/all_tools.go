@@ -15,6 +15,8 @@ type ToolRegister interface {
 	Register(server *mcp.Server)
 }
 
+// TODO bitbucket client as dependency
+// url and token must come from env or intial this
 var tools = []ToolRegister{
 	&ProjectsTools{client: bitbucket.Client{BaseURL: url, Token: token}},
 }
