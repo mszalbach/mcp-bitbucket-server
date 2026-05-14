@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
-	"github.com/mszalbach/mcp-bitbucket-server/tools"
+	"github.com/mszalbach/mcp-bitbucket-server/internal/tools"
 )
 
 func main() {
