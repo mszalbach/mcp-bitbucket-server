@@ -2,7 +2,8 @@
 
 ## Description
 
-This is a mcp server allowing mcp clients connecting to Bitbucket Server or Bitbucket Data Center.
+This is a test mcp server allowing mcp clients connecting to Bitbucket Server or Bitbucket Data Center.
+THis is just for learning the patterns and will probally never be finished.
 
 # Manual testing
 
