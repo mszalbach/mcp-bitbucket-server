@@ -2,8 +2,6 @@ package tools
 
 import (
 	"context"
-	"log/slog"
-	"os"
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
@@ -26,8 +24,6 @@ func GetProjects(
 	req *mcp.CallToolRequest,
 	input GetProjectsInput,
 ) (*mcp.CallToolResult, any, error) {
-	logger := slog.New(slog.NewTextHandler(os.Stderr, nil))
-	logger.Info("Hello2")
 	return &mcp.CallToolResult{
 		Content: []mcp.Content{
 			&mcp.TextContent{Text: "Unable to fetch projects."},
