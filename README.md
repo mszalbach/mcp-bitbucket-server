@@ -1,10 +1,20 @@
 # mcp-bitbucket-server
 
+## Description
 
-# Testing
+This is a mcp server allowing mcp clients connecting to Bitbucket Server or Bitbucket Data Center.
 
+# Manual testing
+
+Install the mcp insecptor
+
+```bash
 npx @modelcontextprotocol/inspector
+```
+Use the follwing settings:
 
-Transport STDIO
-Command go
-Argument run cmd/mcp-bitbucket-server/main.go
+| Setting        | Value                               |
+| -------------- | ----------------------------------- |
+| Transport Type | STDIO                               |
+| Command        | go                                  |
+| Arguments      | un cmd/mcp-bitbucket-server/main.go |
