@@ -8,8 +8,7 @@ import (
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
 
-type GetProjectsInput struct {
-}
+type GetProjectsInput struct{}
 
 type GetProjectsOutput struct {
 	Name string `json:"name"`
@@ -22,7 +21,11 @@ func AddProjectsTools(server *mcp.Server) {
 	}, GetProjects)
 }
 
-func GetProjects(ctx context.Context, req *mcp.CallToolRequest, input GetProjectsInput) (*mcp.CallToolResult, any, error) {
+func GetProjects(
+	ctx context.Context,
+	req *mcp.CallToolRequest,
+	input GetProjectsInput,
+) (*mcp.CallToolResult, any, error) {
 	logger := slog.New(slog.NewTextHandler(os.Stderr, nil))
 	logger.Info("Hello2")
 	return &mcp.CallToolResult{

@@ -6,7 +6,7 @@ This is a mcp server allowing mcp clients connecting to Bitbucket Server or Bitb
 
 # Manual testing
 
-Install the mcp insecptor
+Install the mcp insecptor. This needs node and npx.
 
 ```bash
 npx @modelcontextprotocol/inspector
