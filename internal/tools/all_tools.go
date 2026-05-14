@@ -2,18 +2,25 @@ package tools
 
 import (
 	"github.com/modelcontextprotocol/go-sdk/mcp"
+	"github.com/mszalbach/mcp-bitbucket-server/internal/bitbucket"
 )
 
-type toolAdder struct {
-	adder func(server *mcp.Server)
+const (
+	baseURL = "https://api.bitbucket.org"
+	url     = baseURL + "/rest/api/latest"
+	token   = "your-token"
+)
+
+type ToolRegister interface {
+	Register(server *mcp.Server)
 }
 
-var tools = []toolAdder{
-	{AddProjectsTools},
+var tools = []ToolRegister{
+	&ProjectsTools{client: bitbucket.Client{BaseURL: url, Token: token}},
 }
 
-func InstallTools(server *mcp.Server) {
+func RegisterTools(server *mcp.Server) {
 	for _, t := range tools {
-		t.adder(server)
+		t.Register(server)
 	}
 }

@@ -19,7 +19,7 @@ func main() {
 		Version: "0.0.1",
 	}, nil)
 
-	tools.InstallTools(server)
+	tools.RegisterTools(server)
 
 	if err := server.Run(context.Background(), &mcp.StdioTransport{}); err != nil {
 		log.Fatal(err)
